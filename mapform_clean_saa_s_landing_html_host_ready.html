@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mapform — We help you see your sales world clearly</title>
+  <meta name="description" content="Mapform builds fused.io powered sales maps that turn territories into opportunities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f13;
+      --card:#11161c;
+      --ink:#e7effa;
+      --muted:#9fb0c6;
+      --brand:#5eead4; /* teal/seafoam */
+      --brand-ink:#083a36;
+      --ring:rgba(94,234,212,.45);
+      --line:rgba(255,255,255,.08);
+      --radius:16px;
+      --shadow:0 12px 28px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+      radial-gradient(1400px 900px at 90% -100px, rgba(94,234,212,.10), transparent 60%),
+      linear-gradient(180deg, #0a0d11 0%, #0b0f13 100%);
+      color:var(--ink);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{width:min(1120px, 92vw);margin-inline:auto}
+    .grid{display:grid;gap:24px}
+    header{position:sticky;top:0;background:rgba(10,13,17,.75);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:40}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.2px}
+    .logo-dot{width:12px;height:12px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 6px rgba(94,234,212,.2)}
+    .nav-links{display:flex;gap:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--brand);color:#062522;padding:10px 14px;border-radius:12px;font-weight:700;border:1px solid rgba(0,0,0,.08);box-shadow:0 6px 16px rgba(94,234,212,.25);transition:transform .2s ease}
+    .btn:hover{transform:translateY(-1px)}
+    .btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+
+    .hero{padding:64px 0 28px}
+    .hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+    .pill{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--muted);font-size:13px;margin-bottom:12px}
+    .title{font-size:clamp(34px, 5.2vw, 56px);line-height:1.05;margin:0 0 12px}
+    .subtitle{font-size:clamp(18px, 2.3vw, 22px);color:var(--muted);margin:0 0 22px}
+    .hero-card{background:linear-gradient(180deg, #141b22, #0d1218);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px}
+
+    .section{padding:44px 0}
+    .cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:4px 0 6px;font-size:18px}
+    .muted{color:var(--muted)}
+
+    .pricing{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+    .price{background:linear-gradient(180deg,#11161e,#0c1118);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .price.popular{outline:2px solid var(--brand);box-shadow:0 0 0 6px rgba(94,234,212,.12), var(--shadow)}
+    .price h4{margin:0 0 6px}
+    .price-tag{font-size:32px;font-weight:800;margin:4px 0 12px}
+    .bullets{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+    .bullets li{display:flex;align-items:flex-start;gap:10px}
+    .tick{width:18px;height:18px;flex:0 0 18px;border-radius:4px;background:var(--brand);box-shadow:0 0 0 5px rgba(94,234,212,.16)}
+
+    .cta{display:flex;gap:12px;flex-wrap:wrap}
+    footer{padding:32px 0;border-top:1px solid var(--line);color:var(--muted)}
+    .badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--line);border-radius:999px}
+
+    @media (max-width:900px){
+      .hero .wrap{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><span class="logo-dot"></span>Mapform</div>
+        <div class="nav-links">
+          <a href="#how" class="muted">How it works</a>
+          <a href="#pricing" class="muted">Pricing</a>
+          <a href="#contact" class="btn">Get a Map Demo</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container wrap">
+        <div>
+          <span class="pill">Sales-enablement maps powered by fused.io</span>
+          <h1 class="title">We help you see your sales world clearly</h1>
+          <p class="subtitle">Mapform turns messy lists into clean territory maps. Visualize targets, plan efficient routes, and act with confidence.</p>
+          <div class="cta">
+            <a href="#contact" class="btn">Start your first map</a>
+            <a href="#pricing" class="btn ghost">View pricing</a>
+          </div>
+          <p class="muted" style="margin-top:12px">Delivery options: interactive HTML snapshot and exportable PDF. Your data stays private.</p>
+        </div>
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1526405168847-5f22b2b2f9f8?q=80&w=1400&auto=format&fit=crop" alt="Abstract map visualization" />
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="section">
+      <div class="container">
+        <h2 style="margin:0 0 8px;font-size:28px">How it works</h2>
+        <p class="muted" style="margin:0 0 18px">Simple process that produces clear action.</p>
+        <div class="grid cards">
+          <div class="card">
+            <h3>Upload your targets</h3>
+            <p class="muted">Send a CSV export from Salesforce, HubSpot, or Pipedrive. We ingest, clean, and geocode.</p>
+          </div>
+          <div class="card">
+            <h3>See your market</h3>
+            <p class="muted">We build fused.io maps with clusters, heat, competitors, and territory bounds that match your strategy.</p>
+          </div>
+          <div class="card">
+            <h3>Act with confidence</h3>
+            <p class="muted">Export filtered lists and visit plans. Share an interactive map snapshot with your team.</p>
+          </div>
+          <div class="card">
+            <h3>Iterate fast</h3>
+            <p class="muted">We update layers as your pipeline changes so reps always work with fresh intel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section">
+      <div class="container">
+        <h2 style="margin:0 0 8px;font-size:28px">Pricing</h2>
+        <p class="muted" style="margin:0 0 18px">Start small or scale to teams. No annual lock-in.</p>
+        <div class="grid pricing">
+          <div class="price">
+            <h4>Single Map</h4>
+            <div class="price-tag">$199</div>
+            <ul class="bullets">
+              <li><span class="tick"></span><span>Up to 3 data layers</span></li>
+              <li><span class="tick"></span><span>Interactive HTML + PDF export</span></li>
+              <li><span class="tick"></span><span>72-hour delivery</span></li>
+            </ul>
+            <div style="height:10px"></div>
+            <a href="#contact" class="btn" aria-label="Start Single Map">Start</a>
+          </div>
+
+          <div class="price popular">
+            <h4>Team Pack</h4>
+            <div class="price-tag">$599 / month</div>
+            <ul class="bullets">
+              <li><span class="tick"></span><span>Up to 5 maps per month</span></li>
+              <li><span class="tick"></span><span>Brand styling and logo</span></li>
+              <li><span class="tick"></span><span>1-hour strategy call</span></li>
+              <li><span class="tick"></span><span>Two revisions per map</span></li>
+            </ul>
+            <div style="height:10px"></div>
+            <a href="#contact" class="btn" aria-label="Start Team Pack">Get started</a>
+          </div>
+
+          <div class="price">
+            <h4>Enterprise</h4>
+            <div class="price-tag">$2,000+ / month</div>
+            <ul class="bullets">
+              <li><span class="tick"></span><span>Unlimited maps</span></li>
+              <li><span class="tick"></span><span>Dashboard hosting and white label</span></li>
+              <li><span class="tick"></span><span>Dedicated support</span></li>
+            </ul>
+            <div style="height:10px"></div>
+            <a href="#contact" class="btn" aria-label="Talk to sales">Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 style="margin:0 0 8px;font-size:28px">Get a Map Demo</h2>
+        <p class="muted" style="margin:0 0 18px">Tell us your territory and the outcome you want. We will respond the same day.</p>
+        <div class="grid" style="grid-template-columns:1.1fr .9fr;align-items:start">
+          <form id="lead" class="card" onsubmit="return submitLead(event)">
+            <label>Full name<br/>
+              <input required name="name" class="input" placeholder="Jordan Lee" />
+            </label>
+            <label>Work email<br/>
+              <input required name="email" type="email" class="input" placeholder="jordan@company.com" />
+            </label>
+            <label>Company<br/>
+              <input name="company" class="input" placeholder="Acme Logistics" />
+            </label>
+            <label>What do you want to map?<br/>
+              <textarea name="goal" class="input" rows="5" placeholder="Example: 1,200 prospects in SoCal, show clusters and 3 drive-day routes"></textarea>
+            </label>
+            <button class="btn" type="submit">Send</button>
+            <p id="thanks" class="muted" style="display:none;margin-top:10px">Thanks. We will reach out shortly.</p>
+          </form>
+          <div class="card">
+            <h3>What we deliver</h3>
+            <p class="muted">Interactive fused.io map snapshot with filters and share link. PNG and PDF exports for decks. Optional competitor and POI overlays. Private file transfer on request.</p>
+            <div style="height:10px"></div>
+            <span class="badge"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l9 4.5v9L12 21l-9-4.5v-9L12 3z" stroke="#5eead4"/></svg> Powered by fused.io</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <div>© <span id="year"></span> Mapform. All rights reserved.</div>
+      <div class="muted">Privacy friendly. No cookies. No trackers.</div>
+    </div>
+  </footer>
+
+  <style>
+    /* simple inputs styling at end to keep overrides clean */
+    form.card{display:grid;gap:12px}
+    .input{margin-top:6px;width:100%;padding:12px 12px;border-radius:12px;border:1px solid var(--line);background:#0a0f14;color:var(--ink);outline:none}
+    .input:focus{box-shadow:0 0 0 4px var(--ring);border-color:transparent}
+    label{font-size:14px}
+  </style>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function submitLead(e){
+      e.preventDefault();
+      const data = new FormData(e.target);
+      const subject = encodeURIComponent('Mapform demo request');
+      const body = encodeURIComponent(
+        `Name: ${data.get('name')}\nEmail: ${data.get('email')}`+
+        (data.get('company')?`\nCompany: ${data.get('company')}`:'')+
+        (data.get('goal')?`\nGoal: ${data.get('goal')}`:'')
+      );
+      // mailto keeps it simple for day one. Replace with Formspree or server later.
+      window.location.href = `mailto:hello@mapform.dev?subject=${subject}&body=${body}`;
+      document.getElementById('thanks').style.display = 'block';
+      e.target.reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
